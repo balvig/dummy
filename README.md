@@ -1,24 +1,16 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Run `bin/rake`
 
-Things you may want to cover:
+Result:
 
-* Ruby version
+```
 
-* System dependencies
+# Running:
 
-* Configuration
+F
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Failure:
+PostTest#test_Scopes_don't_get_stuck [/Users/balvig/Documents/dummy/test/models/post_test.rb:10]:                                                            
+Expected "SELECT \"posts\".* FROM \"posts\" WHERE \"posts\".\"read\" = 0 AND \"posts\".\"parent_id\" = 1" to not include "read".                             
+```
