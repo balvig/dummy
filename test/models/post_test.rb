@@ -2,8 +2,7 @@ require 'test_helper'
 
 class PostTest < ActiveSupport::TestCase
   test "Scopes don't get stuck" do
-    parent = Post.create!
-    child = Post.create!(parent: parent)
+    Post.create!
     collection = Post.where(read: false)
 
     refute_includes collection.first.children.to_sql, "read"
